@@ -30,7 +30,7 @@ int mod_inverse(int a, int m) {
     int g = extended_euclid(a, m, x, y);
 
     if (g != 1) {
-        return -1;
+        return ~0;
     }
 
     return (x % m + m) % m;
